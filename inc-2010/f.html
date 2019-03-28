@@ -1,0 +1,66 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8"><style>
+body {
+	font-family: "Arial";
+	font-size: 10pt;
+}
+</style>
+
+</head><body><com:tcontent id="body">
+<center>
+<h3>ACM-ICPC Indonesia National Contest 2010</h3>
+<h2>Problem F</h2>
+<h1>Searching in Tree</h1>
+Time Limit: 8s
+</center>
+<br>
+
+<p>Given a rooted tree which contains N nodes numbered from 0 to N-1 
+with node 0 as the root. Each node has a distinct value assigned to it. 
+You have to write a program that can find the k<sup>th</sup> smallest value in the subtree of a given node X<sub>i</sub>.</p>
+
+<br>
+
+
+<h3>Input</h3>
+<p>The first line of input contains an integer T (1 ≤ T ≤ 20) the number
+ of cases. Each case begins with two integers N and Q (1 ≤ N ≤ 100,000; 1
+ ≤ Q ≤ 10,000) denoting the number of nodes and queries respectively. 
+The next line contains N integers V<sub>i</sub> (0 ≤ V<sub>i</sub> ≤ 2<sup>31</sup>-1) denoting the value assigned to i<sup>th</sup> node. The next line contains N integers P<sub>i</sub> (0 ≤ P<sub>i</sub> &lt; N) denoting the parent of i<sup>th</sup> node. Parent of node 0 will be 0. The next Q lines each contains two integers k<sub>i</sub> and X<sub>i</sub> (1 ≤ k<sub>i</sub> ≤ sizeof-subtree; 0 ≤ X<sub>i</sub> &lt; N).</p>
+
+<h3>Output</h3>
+<p>For each test case, output "Case #X:" (without quotes) where X is the
+ case number starting with 1. Answer each query of the cases in a 
+separate line.</p>
+
+<br><table bgcolor="#000000" border="0" cellpadding="0" cellspacing="0">
+<tbody><tr><td>
+<table width="600" border="0" cellpadding="4" cellspacing="1">
+<tbody><tr><th width="250" align="left" bgcolor="#ffffff">Sample Input</th><th width="250" align="left" bgcolor="#ffffff">Output for Sample Input</th></tr>
+<tr valign="top"><td bgcolor="#ffffff"><pre>1
+8 5
+12 6 2 10 3 15 1 7
+0 2 0 0 3 3 2 3
+1 0
+3 0
+2 3
+1 6
+3 3
+</pre>
+</td><td bgcolor="#ffffff"><pre>Case #1:
+1
+3
+7
+1
+10</pre>
+</td></tr>
+</tbody></table>
+</td></tr>
+</tbody></table>
+
+<br><p><i>Explanation for the 1<sup>st</sup> sample input:</i></p>
+<img src="f_files/f.gif">
+
+
+<br><br>
+</com:tcontent></body></html>

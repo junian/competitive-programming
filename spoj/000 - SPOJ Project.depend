@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1287939524 source:e:\src\spoj\base.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+
+1288081336 source:e:\src\spoj\hepnum.cpp
+	<cstdio>
+	<cstdlib>
+	<cstring>
+
