@@ -1,9 +1,6 @@
 # LeetCode
 
-Backup for my Leetcode solution.
-Please only see at as reference.
-Try do it yourself to solve the problems.
-It's fun!
+Here's a backup of my Leetcode solution. Please use it only as a reference and try solving the problems on your own. It's fun!
 
 - [0001] Two Sum - [Problem](https://leetcode.com/problems/two-sum/description/) | [Solution](https://www.junian.net/leetcode/two-sum-hash-table/) | [Code](/src/two-sum/)
 - [0009] Palindrome Number - [Problem](https://leetcode.com/problems/palindrome-number/description/) | [Solution](https://www.junian.net/leetcode/palindrome-number/) | [Code](/src/palindrome-number/)
