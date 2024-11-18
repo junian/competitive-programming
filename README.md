@@ -1,4 +1,4 @@
-# leetcode
+# LeetCode
 
 Backup for my Leetcode solution.
 Please only see at as reference.
