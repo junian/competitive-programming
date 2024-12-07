@@ -65,7 +65,55 @@ static void Part01(IList<string> inputList)
 
 static void Part02(IList<string> inputList)
 {
-    
+    long total = 0;
+
+    foreach(var line in inputList)
+    {
+        var numbers = line.Replace(":", "")
+            .Split(' ', StringSplitOptions.RemoveEmptyEntries)
+            .Select(x => long.Parse(x))
+            .ToList();
+
+        var expectedOutput = numbers[0];
+
+        var n = numbers.Count - 2;
+        var totalCombinations = (int)Math.Pow(3, n);
+        var results = new List<int[]>();
+
+        for (var i = 0; i < totalCombinations; i++)
+        {
+            var combination = new int[n];
+            int current = i;
+
+            for (int j = 0; j < n; j++)
+            {
+                // Use modulus to determine the operator
+                combination[j] = current % 3;
+                current /= 3; // Move to the next operator
+            }
+
+            results.Add(combination);
+        }
+
+        foreach(var combination in results)
+        {
+            var sum = numbers[1];
+            for(var i=0; i<combination.Length; i++)
+            {
+                var nextNum = numbers[i+2];
+                sum = combination[i] == 0 ? sum + nextNum
+                        : combination[i] == 1 ? sum * nextNum
+                        : long.Parse(sum.ToString() + nextNum.ToString());
+            }
+            if(sum == expectedOutput)
+            {
+                total += expectedOutput;
+                break;
+            }
+        }   
+    }
+
+    Console.WriteLine(total);
 }
 
 var inputList = GetInputList();
