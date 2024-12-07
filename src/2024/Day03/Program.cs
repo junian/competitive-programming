@@ -1,20 +1,39 @@
 ﻿using System.Text.RegularExpressions;
 
-var total = 0;
-var pattern = @"mul\((\d+),(\d+)\)";
-var regex = new Regex(pattern);
-string? line;
-while ((line = Console.ReadLine()) != null)
+static IList<string> GetInputList()
 {
-    var matches = regex.Matches(line);
-    foreach (Match match in matches)
+    var list = new List<string> { };
+    var line = default(string?);
+    while ((line = Console.ReadLine()) != null)
     {
-        if (int.TryParse(match.Groups[1].Value, out int number1) && 
-            int.TryParse(match.Groups[2].Value, out int number2))
-        {
-            total += (number1 * number2);
-        }
+        list.Add(line);
     }
+
+    return list;
 }
 
-Console.WriteLine(total);
+static void Part01(IList<string> inputList)
+{
+    var total = 0;
+    var pattern = @"mul\((\d+),(\d+)\)";
+    var regex = new Regex(pattern);
+    
+    foreach(var line in inputList)
+    {
+        var matches = regex.Matches(line);
+        foreach (Match match in matches)
+        {
+            if (int.TryParse(match.Groups[1].Value, out int number1) && 
+                int.TryParse(match.Groups[2].Value, out int number2))
+            {
+                total += (number1 * number2);
+            }
+        }
+    }
+
+    Console.WriteLine(total);
+}
+
+var inputList = GetInputList();
+
+Part01(inputList);
