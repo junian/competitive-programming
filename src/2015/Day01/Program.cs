@@ -22,7 +22,20 @@ static void Part01(IList<string> inputList)
 
 static void Part02(IList<string> inputList)
 {
-    
+    var level = 0;
+    foreach (var line in inputList)
+    {
+        for(var i=0; i<line.Length; i++)
+        {
+            level += line[i] == '(' ? 1 : -1;
+            if (level == -1)
+            {
+                Console.WriteLine(i + 1);
+                return;
+            }
+        }
+    }
+    // Console.WriteLine(level);
 }
 
 var inputList = GetInputList();
